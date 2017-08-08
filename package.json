@@ -1,0 +1,25 @@
+{
+  "name": "tvrealmadrid.com",
+  "version": "1.0.0",
+  "description": "En qué TV dan el Madrid?",
+  "main": "index.js",
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "export": "next export -o tvrealmadrid.com"
+  },
+  "keywords": [
+    "tv",
+    "real",
+    "madrid",
+    "television",
+    "canal"
+  ],
+  "author": "Pablo Varela",
+  "license": "MIT",
+  "devDependencies": {
+    "next": "^3.0.1-beta.21",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}

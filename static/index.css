@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: royalblue;
+}
+.flex-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Menlo, monospace;
+  text-align: center;
+}
+h2 {
+  font-size: 1rem;
+}
+img {
+  width: 220px;
+  color: red;
+}
