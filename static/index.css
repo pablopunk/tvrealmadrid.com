@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 body {
   margin: 0;
   padding: 0;
@@ -5,25 +7,24 @@ body {
   opacity: 0;
   animation: fadeIn 1s cubic-bezier(1,-0.01, 0.35, 0.99) forwards;
   animation-delay: .6s;
+  font-family: Raleway, sanserif;
 }
 
 .flex-container {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: Menlo, monospace;
   text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
 }
 
 h2 {
   font-size: 1rem;
-}
-
-img {
-  width: 220px;
-  color: red;
 }
 
 @keyframes fadeIn {
