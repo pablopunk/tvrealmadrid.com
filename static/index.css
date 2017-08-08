@@ -19,6 +19,11 @@ body {
   text-align: center;
 }
 
+img {
+  width: 100px;
+  height: 100px;
+}
+
 h1 {
   font-size: 1.8rem;
 }

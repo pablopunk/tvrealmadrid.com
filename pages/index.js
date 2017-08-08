@@ -10,7 +10,7 @@ export default () => (
       <title>TV Real Madrid</title>
     </Head>
     <div className='flex-container'>
-			<img src='https://png.icons8.com/real-madrid/color/96' title='Real Madrid' width='96' height='96' />
+			<img src='https://file-tnwcrtinci.now.sh/rma.svg' title='Real Madrid' />
       <h1>Web en construcción</h1>
       <h2>¿En qué canal juega tu equipo favorito?</h2>
     </div>
