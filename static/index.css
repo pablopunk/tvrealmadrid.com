@@ -2,7 +2,11 @@ body {
   margin: 0;
   padding: 0;
   color: royalblue;
+  opacity: 0;
+  animation: fadeIn 1s cubic-bezier(1,-0.01, 0.35, 0.99) forwards;
+  animation-delay: .6s;
 }
+
 .flex-container {
   height: 100vh;
   display: flex;
@@ -12,10 +16,21 @@ body {
   font-family: Menlo, monospace;
   text-align: center;
 }
+
 h2 {
   font-size: 1rem;
 }
+
 img {
   width: 220px;
   color: red;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
