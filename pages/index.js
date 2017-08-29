@@ -32,6 +32,9 @@ export default class Index extends React.Component {
             </FadeIn>
           </div>
         </main>
+        <footer>
+          <a href="https://pablo.life">Pablo Varela</a>
+        </footer>
       </div>
     )
   }
