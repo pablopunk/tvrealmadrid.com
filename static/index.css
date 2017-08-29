@@ -7,6 +7,10 @@ body {
   font-family: Raleway, sanserif;
 }
 
+*::selection {
+  background-color: #79ffe1;
+}
+
 ul {
   padding: 0;
 }
