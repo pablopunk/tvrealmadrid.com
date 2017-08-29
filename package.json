@@ -25,5 +25,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pablopunk/tvrealmadrid.com.git"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "livesoccertv-parser": "^2.0.0",
+    "react-fade-in": "^0.1.4"
   }
 }
