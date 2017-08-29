@@ -1,6 +1,6 @@
 # [tvrealmadrid.com](https://tvrealmadrid.com)
 
-<p align="center"><i>En qué TV dan el Madrid?</i></p>
+<p align="center"><i>Horarios y canales de los partidos del Real Madrid</i></p>
 
 ## Autor
 
