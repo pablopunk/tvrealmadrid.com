@@ -7,7 +7,7 @@ import Topbar from '../components/topbar'
 
 export default class Index extends React.Component {
   static async getInitialProps () {
-    let matches = (await getMatches('spain', 'real-madrid'))
+    let matches = await getMatches('spain', 'real-madrid')
     matches = matches.filter(m => !m.played)
     return { matches }
   }
