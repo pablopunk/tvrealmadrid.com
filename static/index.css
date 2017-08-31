@@ -60,14 +60,14 @@ main {
 }
 
 .match h2 {
-  font-size: .6em;
+  font-size: 1em;
   color: rgba(0,0,0,.44);
 }
 
 .match .tv {
   color: rgba(0,0,0,.44);
   margin: .3em 0;
-  font-size: .8em;
+  font-size: 1em;
 }
 
 footer {
