@@ -37,7 +37,7 @@ export default class Index extends React.Component {
           <div className='flex-container'>
             <FadeIn>
               {
-                this.props.matches.map(m => <Match match={m} />)
+                this.props.matches.map((m,i) => <Match key={i} match={m} />)
               }
             </FadeIn>
           </div>

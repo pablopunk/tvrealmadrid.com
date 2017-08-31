@@ -4,8 +4,8 @@ export default ({ match }) => (
     <h2>{match.date} - {match.time}</h2>
     <ul>
       {
-        match.tvs.map(t => (
-          <div className='tv'>
+        match.tvs.map((t, i) => (
+          <div key={i} className='tv'>
             {t}
           </div>
         ))
