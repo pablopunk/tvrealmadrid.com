@@ -4,11 +4,16 @@ import Head from 'next/head'
 import getMatches from 'livesoccertv-parser'
 import Match from '../components/match'
 import Topbar from '../components/topbar'
+import translate from '../util/translate'
+
+const filterPlayed = m => !m.played
+const translateMatches = ms => ms.map(m => Object.assign(m, {date: translate.date(m.date)}))
 
 export default class Index extends React.Component {
   static async getInitialProps () {
     let matches = await getMatches('spain', 'real-madrid')
-    matches = matches.filter(m => !m.played)
+    matches = matches.filter(filterPlayed)
+    matches = translateMatches(matches)
     return { matches }
   }
 
