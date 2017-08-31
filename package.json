@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
-    "livesoccertv-parser": "^2.1.0",
+    "livesoccertv-parser": "^2.2.0",
     "react-fade-in": "^0.1.4"
   }
 }
