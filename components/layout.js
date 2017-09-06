@@ -16,7 +16,6 @@ export default class extends React.Component {
           <meta charset='UTF-8' />
           <meta name='viewport' content='width=device-width, initial-scale=1.0' />
           <meta http-equiv='X-UA-Compatible' content='ie=edge' />
-          <link rel='stylesheet' href='/static/index.css' />
           <link rel='apple-touch-icon' sizes='180x180' href='https://favicon.now.sh/tvrealmadrid.com/apple-touch-icon.png' />
           <link rel='icon' type='image/png' sizes='32x32' href='https://favicon.now.sh/tvrealmadrid.com/favicon-32x32.png' />
           <link rel='icon' type='image/png' sizes='16x16' href='https://favicon.now.sh/tvrealmadrid.com/favicon-16x16.png' />
@@ -27,6 +26,7 @@ export default class extends React.Component {
           <meta name='application-name' content='tvrealmadrid' />
           <meta name='msapplication-config' content='https://favicon.now.sh/tvrealmadrid.com/browserconfig.xml' />
           <meta name='theme-color' content='#ffffff' />
+          <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
           <title>TV Real Madrid</title>
         </Head>
         <Topbar />
@@ -38,7 +38,51 @@ export default class extends React.Component {
         <footer>
           <a href='https://pablo.life'>Pablo Varela</a>
         </footer>
-      </div>
+        <style global jsx>{`
+          body {
+            margin: 0;
+            padding: 0;
+            color: royalblue;
+            font-family: Raleway, sanserif;
+          }
+          *::selection {
+            background-color: #79ffe1;
+          }
+          ul {
+            padding: 0;
+          }
+          main {
+            z-index: 2;
+            position: relative;
+            background-color: white;
+            margin-top: 80px;
+          }
+          .flex-container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+          footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1em;
+          }
+          footer a {
+            color: cornflowerblue;
+            text-decoration: none;
+            font-size: .7em;
+          }
+          footer a:hover {
+            text-decoration: underline;
+            color: aquamarine;
+          }
+        `}</style>
+    </div>
     )
   }
 }
