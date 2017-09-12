@@ -7,14 +7,22 @@
     "build": "next build",
     "dev": "next",
     "export": "next build && next export -o tvrealmadrid.com",
-    "pretty":
-      "prettier --no-semi --trailing-comma none --single-quote --write '{pages,components,util}/**/*.js'",
+    "pretty": "prettier --no-semi --trailing-comma none --single-quote --write '{pages,components,util}/**/*.js'",
     "precommit": "npm run pretty"
   },
   "lint-staged": {
-    "*.js": ["npm run pretty", "git add"]
+    "*.js": [
+      "npm run pretty",
+      "git add"
+    ]
   },
-  "keywords": ["tv", "real", "madrid", "television", "canal"],
+  "keywords": [
+    "tv",
+    "real",
+    "madrid",
+    "television",
+    "canal"
+  ],
   "author": "Pablo Varela",
   "license": "MIT",
   "devDependencies": {
@@ -30,7 +38,7 @@
   "dependencies": {
     "better-react-spinkit": "^2.0.0",
     "isomorphic-fetch": "^2.2.1",
-    "livesoccertv-parser": "^3.1.1",
+    "livesoccertv-parser": "^3.1.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-fade-in": "^0.1.4",
