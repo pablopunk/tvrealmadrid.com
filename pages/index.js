@@ -16,32 +16,18 @@ export default class Index extends React.Component {
     this.state = { matches: [] }
   }
 
-  async componentDidMount() {
+  static async getInitialProps() {
     let matches = await getMatches('spain', 'real-madrid')
     matches = matches.filter(filterPlayed)
     matches = translateMatches(matches)
-    return this.setState({ matches })
+    return { matches }
   }
 
   render() {
-    if (!this.state.matches.length) {
-      return (
-        <Layout>
-          <div>
-            <CubeGrid size={50} color="royalblue" />
-          </div>
-          <style jsx>{`
-            div {
-              margin: 3em;
-            }
-          `}</style>
-        </Layout>
-      )
-    }
     return (
       <Layout>
         <FadeIn>
-          {this.state.matches.map((m, i) => <Match key={i} match={m} />)}
+          {this.props.matches.map((m, i) => <Match key={i} match={m} />)}
         </FadeIn>
       </Layout>
     )

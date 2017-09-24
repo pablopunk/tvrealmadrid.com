@@ -19,6 +19,7 @@ export default ({ match }) => (
         margin: 1em;
         border: 1px solid whitesmoke;
         border-radius: 5px;
+        max-width: 500px;
       }
       article h1 {
         font-size: 1.8em;
