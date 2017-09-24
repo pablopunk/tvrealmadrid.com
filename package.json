@@ -8,7 +8,8 @@
     "dev": "next",
     "export": "next build && next export -o tvrealmadrid.com",
     "pretty": "prettier --no-semi --trailing-comma none --single-quote --write '{pages,components,util}/**/*.js'",
-    "precommit": "npm run pretty"
+    "precommit": "npm run pretty",
+    "test": "standard --fix"
   },
   "lint-staged": {
     "*.js": [
