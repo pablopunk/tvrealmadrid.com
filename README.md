@@ -1,9 +1,9 @@
 # [tvrealmadrid.com](https://tvrealmadrid.com)
 
-<p align="center"><i>Horarios y canales de los partidos del Real Madrid</i></p>
+<p align="center"><i>Real Madrid's matches. TVs & Schedules</i></p>
 
-## Autor
+## Author
 
 | ![me](https://www.gravatar.com/avatar/fa50aeff0ddd6e63273a068b04353d9d?s=100)|
 | -----------------------------------------------------------------------------|
-| © 2017 [__Pablo Varela__](http://pablo.life)                                 |
+| [__Pablo Varela__](http://pablo.life)                                        |
