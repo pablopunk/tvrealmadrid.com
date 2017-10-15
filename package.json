@@ -8,15 +8,7 @@
     "build": "next build",
     "dev": "next",
     "export": "next build && next export -o tvrealmadrid.com",
-    "pretty": "prettier --no-semi --trailing-comma none --single-quote --write '{pages,components,util}/**/*.js'",
-    "precommit": "npm run pretty",
     "test": "standard --fix"
-  },
-  "lint-staged": {
-    "*.js": [
-      "npm run pretty",
-      "git add"
-    ]
   },
   "keywords": [
     "tv",
@@ -28,10 +20,7 @@
   "author": "Pablo Varela",
   "license": "MIT",
   "devDependencies": {
-    "husky": "^0.14.3",
-    "lint-staged": "^4.1.3",
     "next": "^3.0.1-beta.21",
-    "prettier": "^1.6.1",
     "standard": "^10.0.3"
   },
   "repository": {
