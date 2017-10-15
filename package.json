@@ -4,6 +4,7 @@
   "description": "En qué TV dan el Madrid?",
   "main": "index.js",
   "scripts": {
+    "start": "next start",
     "build": "next build",
     "dev": "next",
     "export": "next build && next export -o tvrealmadrid.com",
