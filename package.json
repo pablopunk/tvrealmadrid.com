@@ -8,6 +8,7 @@
     "build": "next build",
     "dev": "next",
     "export": "next build && next export -o tvrealmadrid.com",
+    "deploy": "now -v && npm run export && cd pablo.life-static && now",
     "test": "standard --fix"
   },
   "keywords": [
