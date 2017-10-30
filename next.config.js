@@ -1,11 +1,10 @@
+const webpack = require('webpack')
+
 module.exports = {
-  webpack (cfg) {
-    cfg.plugins = cfg.plugins.filter(plugin => plugin.constructor.name !== 'UglifyJsPlugin')
-    return cfg
-  },
-  async exportPathMap () {
-    return {
-      '/': { page: '/' }
-    }
+  webpack: config => {
+    const plugins = config.plugins || []
+    plugins.push(new webpack.IgnorePlugin(/^electron$/))
+    config.plugins = plugins
+    return config
   }
 }

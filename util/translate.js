@@ -1,22 +1,8 @@
-const months = {
-  January: 'Enero',
-  February: 'Febrero',
-  March: 'Marzo',
-  April: 'Abril',
-  May: 'Mayo',
-  June: 'Junio',
-  July: 'Julio',
-  August: 'Agosto',
-  September: 'Septiembre',
-  October: 'Octubre',
-  November: 'Noviembre',
-  December: 'Diciembre'
-}
-const translateDate = date => {
-  for (const month in months) {
-    date = date.replace(month, months[month])
-  }
-  return date
+const moment = require('moment')
+
+const translateDate = (date, lang = 'en') => {
+  moment.locale(lang)
+  return moment(date).format('LLL')
 }
 
 module.exports.date = translateDate

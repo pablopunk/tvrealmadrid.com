@@ -7,8 +7,7 @@
     "start": "next start",
     "build": "next build",
     "dev": "next",
-    "export": "next build && next export -o tvrealmadrid.com",
-    "deploy": "now -v && npm run export && cd tvrealmadrid.com && now",
+    "deploy": "now -v && now",
     "test": "standard --fix"
   },
   "keywords": [
@@ -29,7 +28,9 @@
     "url": "git+https://github.com/pablopunk/tvrealmadrid.com.git"
   },
   "dependencies": {
-    "livesoccertv-parser": "^3.1.2",
+    "accept-language": "^3.0.18",
+    "football-matches": "^1.2.0",
+    "moment": "^2.19.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-fade-in": "^0.1.4",

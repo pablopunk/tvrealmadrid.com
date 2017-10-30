@@ -1,28 +1,35 @@
 import React from 'react'
 import FadeIn from 'react-fade-in'
-import getMatches from 'livesoccertv-parser'
+import getMatches from 'football-matches'
+import acceptLang from 'accept-language'
 import Layout from '../components/layout'
 import Match from '../components/match'
 import translate from '../util/translate'
 
-const filterPlayed = m => !m.played
-const translateMatches = ms =>
-  ms.map(m => Object.assign(m, { date: translate.date(m.date) }))
+const apiKey = process.env.API_KEY
+
+const getLangFromReq = req => {
+  // @TODO: Add more languages (see moment-js docs)
+  acceptLang.languages(['en', 'es', 'gl'])
+  return acceptLang.get(req.headers['accept-language'])
+}
+
+const translateMatches = (ms, lang) =>
+  ms.map(m => Object.assign(m, { date: translate.date(m.date, lang) }))
 
 export default class Index extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = { matches: [] }
   }
 
-  static async getInitialProps() {
-    let matches = await getMatches('spain', 'real-madrid')
-    matches = matches.filter(filterPlayed)
-    matches = translateMatches(matches)
+  static async getInitialProps ({ req }) {
+    let matches = await getMatches('real-madrid', {apiKey})
+    matches = translateMatches(matches, getLangFromReq(req))
     return { matches }
   }
 
-  render() {
+  render () {
     return (
       <Layout>
         <FadeIn>

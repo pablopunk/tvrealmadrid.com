@@ -1,17 +1,10 @@
 export default ({ match }) => (
   <div>
     <article>
-      <h1>{match.game}</h1>
+      <h1>{match.homeTeamName} - {match.awayTeamName}</h1>
       <h2>
-        {match.date} - {match.time}
+        {match.date}
       </h2>
-      <ul>
-        {match.tvs.map((t, i) => (
-          <div key={i} className="tv">
-            {t}
-          </div>
-        ))}
-      </ul>
     </article>
     <style jsx>{`
       article {
