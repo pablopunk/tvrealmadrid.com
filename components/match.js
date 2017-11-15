@@ -7,7 +7,7 @@ export default ({ match }) => (
       </h2>
       <ul>
         {match.tvs.map((t, i) => (
-          <div key={i} className="tv">
+          <div key={i} className='tv'>
             {t}
           </div>
         ))}
