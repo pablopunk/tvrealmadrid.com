@@ -11,6 +11,9 @@
     "deploy": "now -v && npm run export && cd tvrealmadrid.com && now",
     "test": "standard --fix"
   },
+  "now": {
+    "alias": "tvrealmadrid.com"
+  },
   "keywords": [
     "tv",
     "real",
