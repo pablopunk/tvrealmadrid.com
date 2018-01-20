@@ -1,16 +1,16 @@
 const months = {
-  January: 'Enero',
-  February: 'Febrero',
-  March: 'Marzo',
-  April: 'Abril',
+  Jan: 'Enero',
+  Feb: 'Febrero',
+  Mar: 'Marzo',
+  Apr: 'Abril',
   May: 'Mayo',
-  June: 'Junio',
-  July: 'Julio',
-  August: 'Agosto',
-  September: 'Septiembre',
-  October: 'Octubre',
-  November: 'Noviembre',
-  December: 'Diciembre'
+  Jun: 'Junio',
+  Jul: 'Julio',
+  Aug: 'Agosto',
+  Sep: 'Septiembre',
+  Oct: 'Octubre',
+  Nov: 'Noviembre',
+  Dec: 'Diciembre'
 }
 const translateDate = date => {
   for (const month in months) {
