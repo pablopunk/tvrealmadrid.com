@@ -7,8 +7,6 @@
     "start": "next start",
     "build": "next build",
     "dev": "next",
-    "export": "next build && next export -o tvrealmadrid.com",
-    "deploy": "now -v && npm run export && cd tvrealmadrid.com && now",
     "test": "standard --fix"
   },
   "now": {
