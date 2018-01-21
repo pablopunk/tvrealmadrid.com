@@ -12,18 +12,28 @@ const translateMatches = ms =>
 export default class Index extends React.Component {
   constructor (props) {
     super(props)
-    this.state = { matches: props.matches }
+    this.state = { matches: [] }
   }
 
-  static async getInitialProps () {
-    const res = await fetch('https://soccer.now.sh/spain/real-madrid')
-    let {matches} = await res.json()
-    matches = matches.filter(filterPlayed)
-    matches = translateMatches(matches)
-    return { matches }
+  componentDidMount () {
+    fetch('https://soccer.now.sh/spain/real-madrid').then(res => {
+      res.json().then(({ matches }) => {
+        matches = matches.filter(filterPlayed)
+        matches = translateMatches(matches)
+        this.setState({ matches })
+      })
+    })
   }
 
   render () {
+    if (this.state.matches.length === 0) {
+      return (
+        <Layout>
+          <div style={{marginTop: '20px'}}>Loading...</div>
+        </Layout>
+      )
+    }
+
     return (
       <Layout>
         <FadeIn>
