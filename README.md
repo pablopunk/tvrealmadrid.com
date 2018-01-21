@@ -1,5 +1,8 @@
 # [tvrealmadrid.com](https://tvrealmadrid.com)
 
+<p align="center">
+  <img src="https://tvrealmadrid.com/static/header.svg" width="100px" />
+</p>
 <p align="center"><i>Real Madrid's matches. TVs & Schedules</i></p>
 
 
