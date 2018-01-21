@@ -1,0 +1,18 @@
+{
+  "names": {
+    "short-name": "tvrealmadrid",
+    "long-name": "TV Real Madrid"
+  },
+  "colors": {
+    "main": "royalblue",
+    "mainDim": "cornflowerblue",
+    "selection": "aquamarine",
+    "favicon": "#4169e1"
+  },
+  "api": {
+    "url": "https://soccer.now.sh/spain/real-madrid?timezone=Europe/Madrid"
+  },
+  "analytics": {
+    "google-id": "UA-106008527-1"
+  }
+}

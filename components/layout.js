@@ -2,6 +2,7 @@ import React from 'react'
 import ReactGA from 'react-ga'
 import Head from 'next/head'
 import Topbar from './topbar'
+const {names, colors} = require('../settings.json')
 
 export default class extends React.Component {
   componentDidMount () {
@@ -22,45 +23,45 @@ export default class extends React.Component {
           <link
             rel='apple-touch-icon'
             sizes='180x180'
-            href='https://favicon.now.sh/tvrealmadrid.com/apple-touch-icon.png'
+            href='/static/apple-touch-icon.png'
           />
           <link
             rel='icon'
             type='image/png'
             sizes='32x32'
-            href='https://favicon.now.sh/tvrealmadrid.com/favicon-32x32.png'
+            href='/static/favicon-32x32.png'
           />
           <link
             rel='icon'
             type='image/png'
             sizes='16x16'
-            href='https://favicon.now.sh/tvrealmadrid.com/favicon-16x16.png'
+            href='/static/favicon-16x16.png'
           />
           <link
             rel='manifest'
-            href='https://favicon.now.sh/tvrealmadrid.com/manifest.json'
+            href='/static/manifest.json'
           />
           <link
             rel='mask-icon'
-            href='https://favicon.now.sh/tvrealmadrid.com/safari-pinned-tab.svg'
-            color='#4169e1'
+            href='/static/safari-pinned-tab.svg'
+            color={colors.favicon}
           />
           <link
             rel='shortcut icon'
-            href='https://favicon.now.sh/tvrealmadrid.com/favicon.ico'
+            href='/static/favicon.ico'
           />
-          <meta name='apple-mobile-web-app-title' content='tvrealmadrid' />
-          <meta name='application-name' content='tvrealmadrid' />
+          <meta name='apple-mobile-web-app-title' content={names['short-name']} />
+          <meta name='application-name' content={names['short-name']} />
           <meta
             name='msapplication-config'
-            content='https://favicon.now.sh/tvrealmadrid.com/browserconfig.xml'
+            content='/static/browserconfig.xml'
           />
           <meta name='theme-color' content='#ffffff' />
           <link
             href='https://fonts.googleapis.com/css?family=Raleway'
             rel='stylesheet'
           />
-          <title>TV Real Madrid</title>
+          <title>{names['long-name']}</title>
         </Head>
         <Topbar />
         <main>
@@ -73,11 +74,11 @@ export default class extends React.Component {
           body {
             margin: 0;
             padding: 0;
-            color: royalblue;
+            color: ${colors.main};
             font-family: Raleway, sanserif;
           }
           *::selection {
-            background-color: #79ffe1;
+            background-color: ${colors.selection};
           }
           ul {
             padding: 0;
@@ -104,13 +105,13 @@ export default class extends React.Component {
             padding: 1em;
           }
           footer a {
-            color: cornflowerblue;
+            color: ${colors.mainDim};
             text-decoration: none;
             font-size: 0.7em;
           }
           footer a:hover {
             text-decoration: underline;
-            color: aquamarine;
+            color: ${colors.selection};
           }
         `}</style>
       </div>
