@@ -30,8 +30,8 @@
     "url": "git+https://github.com/pablopunk/tvrealmadrid.com.git"
   },
   "dependencies": {
+    "better-react-spinkit": "^2.0.4",
     "isomorphic-fetch": "^2.2.1",
-    "jstimezonedetect": "^1.0.6",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-fade-in": "^0.1.4",
