@@ -7,6 +7,7 @@ import Match from '../components/match'
 const {colors, api} = require('../settings')
 
 const filterPlayed = m => !m.played
+const filterNotPlayed = m => m.played
 
 export default class Index extends React.Component {
   constructor (props) {
@@ -17,8 +18,10 @@ export default class Index extends React.Component {
   componentDidMount () {
     fetch(api.url).then(res => {
       res.json().then(({ matches }) => {
+        const played = matches.filter(filterNotPlayed)
+        const lastResult = played.pop()
         matches = matches.filter(filterPlayed)
-        this.setState({ matches })
+        this.setState({ matches: [lastResult, ...matches] })
       })
     })
   }
