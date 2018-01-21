@@ -4,7 +4,7 @@ import fetch from 'isomorphic-fetch'
 import {DoubleBounce} from 'better-react-spinkit'
 import Layout from '../components/layout'
 import Match from '../components/match'
-const {api} = require('../settings')
+const {colors, api} = require('../settings')
 
 const filterPlayed = m => !m.played
 
@@ -28,7 +28,7 @@ export default class Index extends React.Component {
       return (
         <Layout>
           <div style={{marginTop: '20px'}}>
-            <DoubleBounce size={50} />
+            <DoubleBounce size={50} color={colors.main} />
           </div>
         </Layout>
       )
