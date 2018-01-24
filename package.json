@@ -22,7 +22,7 @@
   "author": "Pablo Varela",
   "license": "MIT",
   "devDependencies": {
-    "next": "^3.0.1-beta.21",
+    "next": "^4.2.3",
     "standard": "^10.0.3"
   },
   "repository": {
