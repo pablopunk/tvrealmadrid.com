@@ -1,9 +1,11 @@
+const Live = () => <span style={{color: 'red', fontSize: '1.5em'}}>●</span>
+
 export default ({ match }) => (
   <div>
     <article>
       <h1>{match.game}</h1>
       <h2>
-        {match.date} - {match.time}
+        {match.date} - {match.time} {match.live && <Live />}
       </h2>
       <ul>
         {match.tvs.map((t, i) => (
