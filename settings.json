@@ -10,7 +10,7 @@
     "favicon": "#4169e1"
   },
   "api": {
-    "url": "https://soccer.now.sh/spain/real-madrid?timezone=Europe/Madrid"
+    "url": "https://soccer.now.sh/spain/real-madrid"
   },
   "analytics": {
     "google-id": "UA-106008527-1"

@@ -2,6 +2,7 @@ import React from 'react'
 import FadeIn from 'react-fade-in'
 import fetch from 'isomorphic-fetch'
 import { DoubleBounce } from 'better-react-spinkit'
+import moment from 'moment-timezone'
 import Layout from '../components/layout'
 import Match from '../components/match'
 const { colors, api } = require('../settings')
@@ -20,6 +21,10 @@ const getLastResultOrLive = matches => {
   return matches.filter(filterNotPlayed).slice(-1)[0]
 }
 
+const guessTimezone = () => moment.tz.guess()
+
+const getApiUrl = () => `${api.url}?timezone=${guessTimezone()}`
+
 export default class Index extends React.Component {
   constructor (props) {
     super(props)
@@ -27,7 +32,7 @@ export default class Index extends React.Component {
   }
 
   componentDidMount () {
-    fetch(api.url).then(res => {
+    fetch(getApiUrl()).then(res => {
       res.json().then(({ matches }) => {
         const next = matches.filter(onlyNext)
         this.setState({
