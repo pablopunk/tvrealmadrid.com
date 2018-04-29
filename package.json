@@ -32,6 +32,7 @@
   "dependencies": {
     "better-react-spinkit": "^2.0.4",
     "isomorphic-fetch": "^2.2.1",
+    "livesoccertv-parser": "^5.0.0",
     "moment-timezone": "^0.5.14",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
