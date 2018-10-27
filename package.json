@@ -22,7 +22,6 @@
   "author": "Pablo Varela",
   "license": "MIT",
   "devDependencies": {
-    "next": "^4.4.0-canary.3",
     "standard": "^10.0.3"
   },
   "repository": {
@@ -34,6 +33,7 @@
     "isomorphic-fetch": "^2.2.1",
     "livesoccertv-parser": "^5.0.0",
     "moment-timezone": "^0.5.14",
+    "next": "^7.0.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-fade-in": "^0.1.4",

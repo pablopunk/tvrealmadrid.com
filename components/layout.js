@@ -2,24 +2,26 @@ import React from 'react'
 import ReactGA from 'react-ga'
 import Head from 'next/head'
 import Topbar from './topbar'
-const {names, colors} = require('../settings.json')
+const {names, colors, analytics} = require('../settings.json')
 
 export default class extends React.Component {
   componentDidMount () {
-    ReactGA.initialize('UA-106008527-1')
-    ReactGA.pageview(document.location.pathname)
+    if (analytics && analytics['google-id']) {
+      ReactGA.initialize(analytics['google-id'])
+      ReactGA.pageview(document.location.pathname)
+    }
   }
 
   render () {
     return (
       <div>
         <Head>
-          <meta charset='UTF-8' />
+          <meta charSet='UTF-8' />
           <meta
             name='viewport'
             content='width=device-width, initial-scale=1.0'
           />
-          <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+          <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
           <link
             rel='apple-touch-icon'
             sizes='180x180'
@@ -117,4 +119,4 @@ export default class extends React.Component {
       </div>
     )
   }
-}
+    }
