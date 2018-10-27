@@ -43,21 +43,19 @@ export default class Index extends React.Component {
   }
 
   render () {
-    if (this.state.matches.length === 0) {
-      return (
-        <Layout>
-          <div style={{ marginTop: '20px' }}>
-            <DoubleBounce size={50} color={colors.main} />
-          </div>
-        </Layout>
-      )
-    }
+    const empty = this.state.matches.length === 0
 
     return (
       <Layout>
+        {(empty &&
+          <div style={{ marginTop: '20px' }}>
+            <DoubleBounce size={50} color={colors.main} />
+          </div>
+        ) ||
         <FadeIn>
           {this.state.matches.map((m, i) => <Match key={i} match={m} />)}
         </FadeIn>
+        }
       </Layout>
     )
   }
