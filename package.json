@@ -9,9 +9,6 @@
     "dev": "next",
     "test": "standard --fix"
   },
-  "now": {
-    "alias": "tvrealmadrid.com"
-  },
   "keywords": [
     "tv",
     "real",
