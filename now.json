@@ -1,3 +1,7 @@
 {
-  "alias": "tvrealmadrid.com"
+  "version": 2,
+  "alias": "tvrealmadrid.com",
+  "builds": [
+    { "src": "package.json", "use": "@now/next" }
+  ]
 }

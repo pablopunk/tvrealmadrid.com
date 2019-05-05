@@ -31,13 +31,13 @@ export default class extends React.Component {
             rel='icon'
             type='image/png'
             sizes='32x32'
-            href='/static/favicon-32x32.png'
+            href='/static/favicon/favicon-32x32.png'
           />
           <link
             rel='icon'
             type='image/png'
             sizes='16x16'
-            href='/static/favicon-16x16.png'
+            href='/static/favicon/favicon-16x16.png'
           />
           <link
             rel='manifest'
@@ -45,12 +45,12 @@ export default class extends React.Component {
           />
           <link
             rel='mask-icon'
-            href='/static/safari-pinned-tab.svg'
+            href='/static/favicon/safari-pinned-tab.svg'
             color={colors.favicon}
           />
           <link
             rel='shortcut icon'
-            href='/static/favicon.ico'
+            href='/static/favicon/favicon.ico'
           />
           <meta name='apple-mobile-web-app-title' content={names['short-name']} />
           <meta name='application-name' content={names['short-name']} />

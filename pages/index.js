@@ -7,6 +7,8 @@ import Layout from '../components/layout'
 import Match from '../components/match'
 const { colors, api } = require('../settings')
 
+const headersWithCors = { headers: {'Access-Control-Allow-Origin': '*'} }
+
 const onlyNext = m => !m.played && !m.live
 const filterNotPlayed = m => m.played
 
@@ -32,7 +34,7 @@ export default class Index extends React.Component {
   }
 
   componentDidMount () {
-    fetch(getApiUrl()).then(res => {
+    fetch(getApiUrl(), headersWithCors).then(res => {
       res.json().then(({ matches }) => {
         const next = matches.filter(onlyNext)
         this.setState({
