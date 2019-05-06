@@ -3,6 +3,7 @@
     "short-name": "tvrealmadrid",
     "long-name": "TV Real Madrid"
   },
+  "defaultLeague": "La Liga",
   "colors": {
     "main": "royalblue",
     "mainDim": "cornflowerblue",
